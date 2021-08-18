@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/hojas-de-estilo.CSS" type "text/CSS">
+    <title>Formulario de Encuesta Satisfacción</title>
+</head>
+
+<header>
+    <h1 id="title">Formulario de Encuesta Hotelera</h1>
+    <p id="description">sus respuestas nos ayudarán a mejorar nuestros servicios.</p>
+</header>
+    
+<body class="fondo">
+
+    <form action="#" id="survey-form" name="survey-form">
+        <label for="name" id="Name">Nombre:</label>
+        <input type="text" name="name" id="name" placeholder="ingrese su nombre" required><br><br>
+        <!--required pattern: HTMl5 own RegEx!!-->
+        <label for="email" id="e-mail">E-mail:</label><br>
+        <input type="text" name="email" id="email" placeholder="ingrese su e-mail" required pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}"><br><br> 
+        
+        <label for="age" name="age" id="Number">Edad:</label><br>
+        <input type="text" name="age" id="number" placeholder="ingrese su edad" required pattern="[0-9]{1,2}" min="0" max="99"><br><br>
+        
+        <p>¿Qué tan satisfecho se encuentra usted con nuestros servicios?</p>
+        <select name="listbox" id="dropdown" required>
+            <option disabled selected value>seleccione una opción</option>
+            <option value="alto">Muy satisfecho</option>
+            <option value="conforme">satisfecho</option>
+            <option value="Regular">Indiferente</option>
+            <option value="insatisfecho">Insatisfecho</option>
+        </select><br><br>
+
+        <p>¿Nos recomendaría con sus conocidos y/o amigos?</p>
+        <label for="totally"><input type="radio" id="totally" name="recomendacion" required>Totalmente.</label><br>
+        <label for="probably"><input type="radio" id="probably" name="recomendacion">Probablemente.</label><br>
+        <label for="not_sure"><input type="radio" id="not_sure" name="recomendacion">No lo sé.</label><br>
+        <label for="totally_not"><input type="radio" id="totally_not" name="recomendacion">No lo haría.</label><br><br>
+    
+        <p>¿En qué considera podemos mejorar?</p>
+        <label for="costoBeneficio"><input type="checkbox" name="mejora" id="costoBeneficio" value="costoBeneficio">Relación costo/beneficio.</label><br>
+        <label for="calidad"><input type="checkbox" name="mejora" id="calidad" value="calidad">Calidad de servicios.</label><br>
+        <label for="cordialidad"><input type="checkbox" name="mejora" id="cordialidad" value="cordialidad">Cordialidad.</label><br>
+        <label for="tiempoRespuesta"><input type="checkbox" name="mejora" id="tiempoRespuesta" value="tiempoRespuesta">Tiempo de respuesta.</label><br><br>
+        
+        <section id="seccionComentario">
+        <p id="parrafo">¿Algún comentario o sugerencia?</p>
+        <textarea name="comentarios" id="comentarios" placeholder="ingrese sus comentarios aquí..." rows="5" cols="25">
+        </textarea><br><br>
+        <div id="send"><input type="submit" id="enviar"><br></div>
+        </section>
+    </form>
+
+</body>
+
+</html>
